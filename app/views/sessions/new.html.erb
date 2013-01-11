@@ -1,0 +1,28 @@
+<h1>Login</h1>
+
+<% if flash[:alert] %>
+  <div class="alert">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+<% if flash[:success] %>
+  <div class="alert alert-success">
+    <%= flash[:success] %>
+  </div>
+<% end %>
+<% if flash[:error] %>
+  <div class="alert alert-error">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+<%= form_tag('/sessions') do %>
+  <%= label_tag(:username, 'Username') %>
+  <div>
+    <%= text_field_tag(:username) %>
+  </div>
+  <%= label_tag(:password, 'Password') %>
+  <div>
+    <%= text_field_tag(:password) %>
+  </div>
+  <br><%= submit_tag('Login', class: 'btn btn-primary') %>
+<% end %>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/bcrypt/!svn/ver/10/trunk/railstest/app/views/users
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/bcrypt/!svn/ver/10/trunk/railstest/app/views/users/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/bcrypt/!svn/ver/9/trunk/railstest/app/views/users/show.html.erb
+END

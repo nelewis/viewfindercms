@@ -1,0 +1,188 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-04 10:03:46 -0800
+Connecting to database specified by database.yml
+Processing by MainController#home as HTML
+  Rendered main/home.html.erb within layouts/application (2.1ms)
+Compiled main.css  (3595ms)  (pid 14705)
+Compiled application.css  (1ms)  (pid 14705)
+Compiled jquery.js  (2ms)  (pid 14705)
+Compiled jquery_ujs.js  (0ms)  (pid 14705)
+Compiled application.js  (49ms)  (pid 14705)
+Completed 200 OK in 3851ms (Views: 3850.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-01-04 10:03:50 -0800
+Served asset /main.css - 200 OK (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-04 10:03:50 -0800
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-04 10:03:50 -0800
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-04 10:03:50 -0800
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-04 10:03:50 -0800
+Served asset /jquery.js - 200 OK (36ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2013-01-04 10:03:53 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-04 10:04:00 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKkPIcwIv8G8lSnubOWKKVT0QcbBea18rdPA/JrH378=", "username"=>"unionstate", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 35ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rails4/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rails4/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rails4/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-01-04 10:04:48 -0800
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:7:in `new'
+  app/controllers/users_controller.rb:7:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rails4/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rails4/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rails4/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20121214231318)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255) NOT NULL, "password_digest" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121214231318')[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_username')
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-04 10:06:15 -0800
+Connecting to database specified by database.yml
+Processing by MainController#home as HTML
+  Rendered main/home.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-01-04 10:06:17 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 72ms (Views: 16.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-04 10:06:18 -0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-04 10:06:18 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-01-04 10:06:25 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKkPIcwIv8G8lSnubOWKKVT0QcbBea18rdPA/JrH378=", "user"=>{"username"=>"unionstate", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (7.6ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 Jan 2013 18:06:26 UTC +00:00], ["password_digest", "$2a$10$FN7B1GXWdjKlddNGMIlAnuDdA90HbxypUg1vJNVb4fuFS/.0Qml/O"], ["updated_at", Fri, 04 Jan 2013 18:06:26 UTC +00:00], ["username", "unionstate"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 308ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-01-04 10:06:26 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-04 10:06:26 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-04 10:06:26 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-10 21:39:43 -0800
+Connecting to database specified by database.yml
+Processing by MainController#home as HTML
+  Rendered main/home.html.erb within layouts/application (2.4ms)
+Compiled main.css  (3220ms)  (pid 61915)
+Compiled application.css  (3229ms)  (pid 61915)
+Compiled jquery.js  (2ms)  (pid 61915)
+Compiled jquery_ujs.js  (0ms)  (pid 61915)
+Compiled application.js  (47ms)  (pid 61915)
+Completed 200 OK in 3361ms (Views: 3360.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-01-10 21:39:47 -0800
+Served asset /main.css - 200 OK (17ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 21:39:47 -0800
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 21:39:47 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 21:39:47 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 21:39:47 -0800
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2013-01-10 21:39:53 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 21:39:53 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 21:39:53 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 21:39:53 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 21:39:53 -0800
+Served asset /application.js - 304 Not Modified (0ms)

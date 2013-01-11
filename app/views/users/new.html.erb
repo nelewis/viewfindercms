@@ -1,0 +1,26 @@
+<h1>Sign Up</h1>
+
+<% if @user.errors.any? %>
+  <div class="alert alert-error">
+    <ul>
+      <% @user.errors.messages.each do |msg| %>
+        <li><%= msg.last.first %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for(@user) do |f| %>
+  <%= f.label(:username, 'Username') %>
+  <div>
+    <%= f.text_field(:username) %>
+  </div>
+  <%= f.label(:password, 'Password') %>
+  <div>
+    <%= f.text_field(:password) %>
+  </div>
+  <%= f.label(:password_confirmation, 'Confirm Password') %>
+  <div>
+    <%= f.text_field(:password_confirmation) %>
+  </div>
+  <br><%= f.submit('Sign Up', class: 'btn btn-primary') %>
+<% end %>
