@@ -186,3 +186,126 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 21:39:53 -0800
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-17 22:24:51 -0800
+Connecting to database specified by database.yml
+Processing by MainController#home as HTML
+  Rendered main/home.html.erb within layouts/application (77.0ms)
+Compiled main.css  (3719ms)  (pid 5588)
+Compiled application.css  (2ms)  (pid 5588)
+Compiled jquery.js  (3ms)  (pid 5588)
+Compiled jquery_ujs.js  (0ms)  (pid 5588)
+Compiled application.js  (152ms)  (pid 5588)
+Completed 200 OK in 4572ms (Views: 4572.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-01-17 22:25:02 -0800
+Served asset /main.css - 200 OK (11ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-17 22:25:02 -0800
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-17 22:25:02 -0800
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-17 22:25:02 -0800
+Served asset /jquery_ujs.js - 200 OK (26ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-17 22:25:02 -0800
+Served asset /application.js - 200 OK (10ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2013-01-17 22:25:19 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-17 22:25:20 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-01-17 22:25:20 -0800
+Served asset /main.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-17 22:25:20 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-17 22:25:20 -0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-17 22:25:20 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-01-17 22:29:40 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 515ms (Views: 62.0ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-17 22:29:42 -0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-01-17 22:29:42 -0800
+Served asset /main.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-17 22:29:42 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-17 22:29:42 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-17 22:29:42 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-01-17 22:30:04 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OU7YqVLJTRC19cP7jbDGeHc7jO9SqLbV16cBQ/wr8W0=", "user"=>{"username"=>"lolo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (190.0ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)  [["created_at", Fri, 18 Jan 2013 06:30:04 UTC +00:00], ["password_digest", "$2a$10$LU2m8OU/0tG1HpXeZzTlBe9NZlv1hx92at0jx79XMUG1qeCrgJ4Ai"], ["updated_at", Fri, 18 Jan 2013 06:30:04 UTC +00:00], ["username", "lolo"]]
+  [1m[36m (183.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 548ms (ActiveRecord: 373.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2013-01-17 22:30:05 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-17 22:30:07 -0800
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-17 22:30:07 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-01-17 22:30:07 -0800
+Served asset /main.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-17 22:30:07 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-17 22:30:07 -0800
+Served asset /application.js - 304 Not Modified (1ms)
